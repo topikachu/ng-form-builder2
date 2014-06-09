@@ -1,23 +1,26 @@
-<div ng-include="'partials/navbar'"></div>
 
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
 
-<div class="row marketing">
-  <div ng-repeat="thing in awesomeThings">
-      <h4>{{thing.name}}</h4>
-      <p>{{thing.info}}</p>
-  </div>
+
+<button ng-click="testclick()">test</button>
+
+
+
+
+<hr/>
+<div class="row">
+
+    <div class="form-horizontal col-md-4">
+        <fb-builder ng-model="components" /></fb-builder>
+    </div>
+    <div class="form-horizontal col-md-4">
+        <fb-component ng-model="component" ng-repeat="component in components"></fb-component>
+    </div>
 </div>
-<fb-component ng-model="component"></fb-component>
 <div>form builder</div>
+
+
+
 <fb-builder ng-model="formObjects"></fb-builder>
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+    <p>♥ from the Yeoman team</p>
 </div>
